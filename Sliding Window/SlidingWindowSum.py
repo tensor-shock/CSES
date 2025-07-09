@@ -8,11 +8,11 @@ for i in range(1,n):
     lis.append(x)
 cs=0
 for i in range(k):
-    cs^=lis[i]
+    cs+=lis[i]
 ans=[cs]
 for i in range(k,n):
-    cs^=lis[i]
-    cs^=lis[i-k]
+    cs+=lis[i]
+    cs-=lis[i-k]
     ans.append(cs)
 res=0
 for x in ans:
